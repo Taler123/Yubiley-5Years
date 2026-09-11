@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С нашей 5-й годовщиной! ❤️</title>
+    <style>
+        :root {
+            --primary-color: #ff4d6d;
+            --secondary-color: #ff85a1;
+            --background-color: #fff0f3;
+            --text-color: #590d22;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .heart-container {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .heart {
+            background-color: var(--primary-color);
+            display: inline-block;
+            height: 50px;
+            position: relative;
+            transform: rotate(-45deg);
+            width: 50px;
+            animation: beat .8s infinite alternate;
+        }
+
+        .heart:before, .heart:after {
+            content: "";
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            height: 50px;
+            position: absolute;
+            width: 50px;
+        }
+
+        .heart:before {
+            top: -25px;
+            left: 0;
+        }
+
+        .heart:after {
+            top: 0;
+            left: 25px;
+        }
+
+        @keyframes beat {
+            0% { transform: scale(1) rotate(-45deg); }
+            100% { transform: scale(1.15) rotate(-45deg); }
+        }
+
+        .main-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(255, 77, 109, 0.15);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .main-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .counter {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 20px 0;
+            background: var(--background-color);
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px dashed var(--secondary-color);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        .photo-placeholder {
+            background: var(--secondary-color);
+            color: white;
+            border-radius: 12px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .photo-placeholder:hover {
+            transform: scale(1.05);
+            background: var(--primary-color);
+        }
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>С 5-летием наших отношений!</h1>
+        <p class="subtitle">Каждая секунда с тобой — это подарок</p>
+    </header>
+
+    <div class="heart-container">
+        <div class="heart"></div>
+    </div>
+
+    <main class="main-card">
+        <p>Моя любимая! Сегодня особенный день — ровно 5 лет с тех пор, как мы встретились. Спасибо тебе за твою любовь, нежность, поддержку и за счастливые моменты и эмоции что ты мне даришь. За эти годы мы построили семью, полную смеха, и веселья.</p>
+        
+        <p>Мы вместе уже целых:</p>
+        <!-- Статический красивый счетчик -->
+        <div class="counter">
+            60 месяцев • 1826 дней • Любовь навсегда
+        </div>
+
+        <p>Я безумно счастлив быть рядом с тобой и с нетерпением жду нашего совместного будущего. Ты — мое самое главное сокровище! ❤️</p>
+    </main>
+
+    <!-- Блок для ваших будущих фотографий -->
+    <div class="gallery">
+        <img src="D:/Программы/Happy/First.jpg" alt="Наше знакомство" style="width:100%; border-radius:12px;"> 
+        <br>
+        <p>Наше знакомство</p>
+        <img src="D:/Программы/Happy/Second.jpg" alt="Первое свидание" style="width:100%; border-radius:12px;"> 
+        <br>
+        <p>Первое свидание</p>
+        <img src="D:/Программы/Happy/Third.jpg" alt="Самый яркий момент" style="width:100%; border-radius:12px;"> 
+        <br>
+        <p>Самый яркий момент</p>
+        
+    </div>
+
+    <footer>
+        С любовью, твой Славичек © 2026
+    </footer>
+
+</body>
+</html>
